@@ -6,7 +6,7 @@ const fs = require('fs');
 // Loads environment variables
 dotenv.config();
 const hostname = "0.0.0.0";
-const port = 80;
+const port = process.env.PORT || 80;
 const gmap_api_key = "AIzaSyDe6e2HOSU8oBAhIx8991OTPla8WbvP7Dw";
 const traffic_accident_csv = './static/台中.csv';
 
