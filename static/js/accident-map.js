@@ -18,9 +18,6 @@ function map_loaded_handler () {
             center: center
         });
 
-        geoJSON = new google.maps.Data();
-        geoJSON.loadGeoJson('tw.json');
-
         accidents.forEach(acc => {
             marker = new google.maps.Marker({
                 position: { lat: Number(acc.lat), lng: Number(acc.lng) },
@@ -79,6 +76,8 @@ function map_loaded_handler () {
         });
 
         heatmap.set('radius', heatmap.get('radius') ? null : 20);
+        loadGeoChart()
+        $("#chart").hide();
     });
 
 }
