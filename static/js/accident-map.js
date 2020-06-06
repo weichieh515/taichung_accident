@@ -19,7 +19,8 @@ function map_loaded_handler () {
         });
 
         accidents.forEach(acc => {
-            marker = new google.maps.Marker({
+
+            var marker = new google.maps.Marker({
                 position: { lat: Number(acc.lat), lng: Number(acc.lng) },
                 map,
             });
